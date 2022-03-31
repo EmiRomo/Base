@@ -5,7 +5,7 @@ using namespace std;
 
 struct Datos {
 	string nombre, nt, descripcion;
-	int hrs;
+	int hrs = 0;
 	int precio_ut = 0, precio_u = 0, t = 0, costo = 0;
 
 
@@ -38,13 +38,15 @@ int main() {
 			while (i < 3) {
 
 				cout << "Ingrese su nombre" << endl;
-				cin >> Citas[i].nombre;
+				cin.ignore();
+				getline (cin,Citas[i].nombre);
 				cout << "Ingrese hora del tratamiento" << endl;
 				cin >> Citas[i].hrs;
 				cout << "Ingrese el nombre del tratamiento" << endl;
 				cin >> Citas[i].nt;
 				cout << "Ingrese la descripcion del tratamiento" << endl;
-				cin >> Citas[i].descripcion;
+				cin.ignore();
+				getline (cin, Citas[i].descripcion);
 				cout << "Ingrese el precio unitario del tratamiento" << endl;
 				cin >> Citas[i].precio_ut;
 				cout << "Cantidad del tratamiento" << endl;
@@ -60,6 +62,7 @@ int main() {
         	}
 			cout << "Limite de citas alcanzado" << endl;
 			system("pause");
+			break;
 			
 			
 
@@ -77,7 +80,7 @@ int main() {
 			cout << "Lista de citas vigentes" << endl;
 			for (int i = 0; i < 3; i++) {
 
-				cout << "ID" << i << endl;
+				cout << "ID " << i << endl;
 				cout << "Nombre: " << Citas[i].nombre << endl;
 				cout << "Hora del tratamiento " << Citas[i].hrs << endl;
 				cout << "Nombre del tratamiento: " << Citas[i].nt << endl;
