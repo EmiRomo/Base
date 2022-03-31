@@ -35,7 +35,7 @@ int main() {
 
 		case 1: 
 
-			while (i < 1) {
+			while (i < 3) {
 
 				cout << "Ingrese su nombre" << endl;
 				cin.ignore();
@@ -43,7 +43,7 @@ int main() {
 				cout << "Ingrese hora del tratamiento" << endl;
 				cin.ignore();
 				cin >> Citas[i].hrs;
-				cout << "Ingrese hora del tratamiento" << endl;
+				cout << "Ingrese los minutos" << endl;
 				cin >> Citas[i].min;
 				cout << "Ingrese el nombre del tratamiento" << endl;
 				cin >> Citas[i].nt;
@@ -81,7 +81,7 @@ int main() {
 
 		case 4:
 			cout << "Lista de citas vigentes" << endl;
-			for (int i = 0; i < 1; i++) {
+			for (int i = 0; i < 3; i++) {
 
 				cout << "ID " << i << endl;
 				cout << "Nombre: " << Citas[i].nombre << endl;
